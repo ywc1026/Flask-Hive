@@ -8,7 +8,7 @@ function chart_test() {
 
     console.log("I am Ok");
     // 基于准备好的dom，初始化echarts实例
-    //var myChart = echarts.init(document.getElementById('main'));
+    var myChart = echarts.init(document.getElementById('main'));
 // 指定图表的配置项和数据
     var option = {
         title: {
@@ -73,6 +73,7 @@ function chart_test2() {
 
     init_chart(chartlist);
 
-    flushchart('main');
+    //flushchart('main');
+    chart_test();
 
 })();
