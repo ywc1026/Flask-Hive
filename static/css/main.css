@@ -12,7 +12,7 @@
 
 .item{
 
-    margin: 20px auto auto 100px;
+    margin: 20px auto auto 10px;
 
 }
 
@@ -21,6 +21,15 @@
 
     margin: 20px auto auto 100px;
     color: crimson;
+    cursor: pointer;
+
+}
+
+
+.lab2{
+
+    margin: 20px auto auto 20px;
+    color: black;
     cursor: pointer;
 
 }
