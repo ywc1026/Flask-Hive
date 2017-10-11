@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Flasky{% endblock %}</title>
+
+    <link rel="stylesheet" href="/static/css/main.css">
+    <script src="/static/plugin/echarts.min.js"></script>
+    <script src="/static/plugin/jquery-2.1.4/jquery.js"></script>
+
+
+</head>
+<body>
+    {% include 'header.html' %}
+
+    {% block contain %}
+
+    {% endblock %}
+
+
+
+    {% block userjs %}
+
+    {% endblock %}
+
+</body>
+</html>
