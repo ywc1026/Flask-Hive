@@ -5,11 +5,10 @@
 
 function chart_test() {
 
-
     console.log("I am Ok");
     // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById('main'));
-// 指定图表的配置项和数据
+    // var myChart = echarts.init(document.getElementById('main'));
+    // 指定图表的配置项和数据
     var option = {
         title: {
             text: 'ECharts 入门示例'
@@ -38,10 +37,10 @@ function chart_test() {
 function chart_test2() {
 
 
-    console.log('S');
+    console.log('I am Ok');
     // 基于准备好的dom，初始化echarts实例
     //var myChart = echarts.init(document.getElementById('chart2'));
-// 指定图表的配置项和数据
+    // 指定图表的配置项和数据
     var option = {
         title: {
             text: 'ECharts 入门示例'
@@ -69,11 +68,10 @@ function chart_test2() {
 
 (function (){
 
-    var chartlist = [{'elemid': 'main'}, {'elemid': 'chart2'}];
+    var chartlist = [{"elemid": "main"}, {"elemid": "chart2"}];
 
     init_chart(chartlist);
 
-    //flushchart('main');
-    chart_test();
+    flushchart('main');
 
 })();
