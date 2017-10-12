@@ -9,7 +9,7 @@ class LoggerConfig(object):
     def __init__(self):
         self.logger_name = 'root'
 
-        logging.basicConfig(filename=config.LOGGER_PATH, level=logging.DEBUG)
+        logging.basicConfig(level=logging.DEBUG)
 
         self.add_stream_handler()
         self.add_file_handler()
