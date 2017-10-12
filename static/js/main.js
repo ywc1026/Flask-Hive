@@ -11,6 +11,7 @@
 
     init_chart(chartlist);
     init_date(chartlist);
+    login();
 
 
 

@@ -22,6 +22,7 @@ function init_date(charlist) {
     $("#sdate").jeDate({
             format:"YYYY-MM-DD",
             isTime:false,
+            isinitVal: true,
             minDate:"2014-09-19 00:00:00",
             okfun:function(obj) {
                 var sdate = $("#sdate").val();
@@ -40,6 +41,7 @@ function init_date(charlist) {
     $("#edate").jeDate({
             format:"YYYY-MM-DD",
             isTime:false,
+            isinitVal: true,
             minDate:"2014-09-19 00:00:00",
             okfun:function(obj) {
                 var sdate = $("#sdate").val();
@@ -110,4 +112,45 @@ function setChartData(elem, data) {
 
     var chart = echarts.getInstanceByDom(document.getElementById(elem));
     chart.setOption(option);
+}
+
+
+function login() {
+
+    $("#btn").click(function () {
+
+        var elem = $(this);
+        
+        if (elem.text() == "Login in"){
+            var url = "";
+            var param = {
+                "account": $("#account").val(),
+                "password": $("#password").val()
+            }
+
+            $.post(url, param, function (json_data) {
+
+                if (json_data.code == 0){
+                    elem.text("Login out");
+                }else{
+                    // elem.text("Login in");
+                    alert(json_data.msg);
+                }
+
+            });
+        }else{
+            var url = "";
+
+            $.post(url, {}, function (json_data) {
+
+                if (json_data.code == 0){
+                    elem.text("Login in");
+                }else{
+                    // elem.text("Login out");
+                    alert(json_data.msg);
+                }
+
+            });
+        }
+    })
 }
