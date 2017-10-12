@@ -1,6 +1,11 @@
 
 
 
+.contain{
+    width: 1170px;
+    margin: 50px auto auto auto;
+}
+
 
 .header{
 
@@ -19,17 +24,41 @@
 
 .lab{
 
-    margin: 20px auto auto 100px;
+    margin: 20px auto auto 60px;
     color: crimson;
     cursor: pointer;
 
 }
 
 
-.lab2{
+.username{
+    margin: 20px auto auto 600px;
+    color: black;
+    cursor: pointer;
+}
 
-    margin: 20px auto auto 20px;
+
+.password{
+
+    margin: 20px auto auto 85px;
     color: black;
     cursor: pointer;
 
+}
+
+
+.date1{
+    margin: 45px auto auto 300px;
+}
+
+
+.date2{
+    margin: 45px auto auto 80px;
+}
+
+
+.chart{
+    margin: 50px auto auto auto;
+    width: 800px;
+    height: 500px;
 }

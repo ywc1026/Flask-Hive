@@ -9,7 +9,6 @@ function init_chart(chartlist){
     chartlist.forEach(function(value, index, array){
 
         var elem = value["elemid"];
-        console.log(elem);
 
         echarts.init(document.getElementById(elem));
 
@@ -18,98 +17,97 @@ function init_chart(chartlist){
 }
 
 
+function init_date(charlist) {
 
-function flushchart(elem) {
+    $("#sdate").jeDate({
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2014-09-19 00:00:00",
+            okfun:function(obj) {
+                var sdate = $("#sdate").val();
+                var edate = $("#edate").val();
 
-    option = {
-    title: {
-        text: 'The Price of Stock',
-        subtext: '0000338'
-    },
-    tooltip: {
-        trigger: 'axis',
-        axisPointer: {
-            type: 'cross'
-        }
-    },
-    toolbox: {
-        show: true,
-        feature: {
-            saveAsImage: {}
-        }
-    },
-    xAxis:  {
-        type: 'category',
-        boundaryGap: false,
-        data: ['09:30', '09:40', '09:50', '10:00', '10:10', '10:20', '10:30', '10:40', '10:50', '11:00', '11:10', '11:20', '11:30', '13:00', '13:10', '13:20', '13:30', '13:40', '13:50', '14:00']
-    },
-    yAxis: {
-        type: 'value',
-        axisLabel: {
-            formatter: '{value} $'
-        },
-        axisPointer: {
-            snap: true
-        }
-    },
-    visualMap: {
-        show: false,
-        dimension: 0,
-        pieces: [{
-            lte: 6,
-            color: 'red'
-        }, {
-            gt: 6,
-            lte: 8,
-            color: 'green'
-        }, {
-            gt: 8,
-            lte: 14,
-            color: 'green'
-        }, {
-            gt: 14,
-            lte: 17,
-            color: 'red'
-        }, {
-            gt: 17,
-            color: 'green'
-        }]
-    },
-    series: [
-        {
-            name:'Price',
-            type:'line',
-            smooth: true,
-            data: [30, 28, 25, 26, 27, 30, 55, 50, 40, 39, 38, 39, 40, 50, 60, 75, 80, 70, 60, 40],
-            markArea: {
-                data: [ [{
-                    name: 'AskVolume',
-                    xAxis: '09:40'
-                }, {
-                    xAxis: '10:00'
-                }], [{
-                    name: 'AskVolume',
-                    xAxis: '10:50'
-                }, {
-                    xAxis: '11:30'
-                }], [{
-                    name: 'AskVolume',
-                    xAxis: '13:30'
-                }, {
-                    xAxis: '14:00'
-                }] ]
+                charlist.forEach(function (value, index, array) {
+
+                    var elem = value['elemid'];
+                    var dims = value["dims"];
+                    flushchart(sdate, edate, elem, dims);
+                })
+
             }
-        }
-    ]
-};
+    })
 
+    $("#edate").jeDate({
+            format:"YYYY-MM-DD",
+            isTime:false,
+            minDate:"2014-09-19 00:00:00",
+            okfun:function(obj) {
+                var sdate = $("#sdate").val();
+                var edate = $("#edate").val();
 
+                charlist.forEach(function (value, index, array) {
 
-    // 使用刚指定的配置项和数据显示图表。
-    var chart = echarts.getInstanceByDom(document.getElementById(elem));
-    chart.setOption(option);
+                    var elem = value['elemid'];
+                    var dims = value["dims"];
+                    flushchart(sdate, edate, elem, dims);
+                })
+            }
+    })
 
 }
 
 
 
+
+function flushchart(sdate, edate, elem, dims) {
+
+    var url = "";
+    var params = {
+        "sdate": sdate,
+        "edate": edate,
+        "dims": dims
+    };
+
+    console.log(params);
+    $.get(url, params, function (json_data) {
+
+        if (json_data.code == 0){
+            setChartData(elem, json_data.data);
+        }
+    });
+
+}
+
+
+function setChartData(elem, data) {
+
+
+    var title = data["data"];
+    var xAxis = data["xAxis"];
+    var series = data["series"];
+
+    var names = [];
+
+    series.forEach(function (value, index, array) {
+        names.push(value["name"]);
+    })
+
+
+    var option = {
+            title: {
+                text: title
+            },
+            tooltip: {},
+            legend: {
+                data:['销量']
+            },
+            xAxis: {
+                data: xAxis
+            },
+            yAxis: {},
+            series: series
+        };
+
+    var chart = echarts.getInstanceByDom(document.getElementById(elem));
+    chart.setOption(option);
+}
