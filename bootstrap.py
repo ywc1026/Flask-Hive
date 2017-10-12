@@ -1,5 +1,6 @@
 from flask import Flask, g, request
 from viewhandler.page_blueprint import page
+from viewhandler.user_blueprint import user
 
 
 app = Flask(__name__)
@@ -7,7 +8,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 
 
-BLUEPRINT = [page]
+BLUEPRINT = [page, user]
 
 
 def boostrap_app(app):

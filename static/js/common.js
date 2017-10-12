@@ -120,9 +120,9 @@ function login() {
     $("#btn").click(function () {
 
         var elem = $(this);
-        
-        if (elem.text() == "Login in"){
-            var url = "";
+
+        if (elem.text() == "Sign in"){
+            var url = "/user/login";
             var param = {
                 "account": $("#account").val(),
                 "password": $("#password").val()
@@ -130,23 +130,22 @@ function login() {
 
             $.post(url, param, function (json_data) {
 
+                console.log(json_data);
                 if (json_data.code == 0){
-                    elem.text("Login out");
+                    elem.text("Logout");
                 }else{
-                    // elem.text("Login in");
                     alert(json_data.msg);
                 }
 
             });
         }else{
-            var url = "";
+            var url = "/user/logout";
 
             $.post(url, {}, function (json_data) {
 
                 if (json_data.code == 0){
-                    elem.text("Login in");
+                    elem.text("Sign in");
                 }else{
-                    // elem.text("Login out");
                     alert(json_data.msg);
                 }
 
