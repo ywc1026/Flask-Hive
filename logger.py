@@ -15,9 +15,9 @@ class LoggerConfig(object):
         self.add_file_handler()
         self.add_email_handler()
 
-    def into(self, msg):
-
-        logging.getLogger(self.logger_name).info(msg)
+    @property
+    def logger(self):
+        return logging.getLogger(self.logger_name)
 
     def add_email_handler(self):
 
@@ -48,8 +48,8 @@ class LoggerConfig(object):
         logging.getLogger(self.logger_name).addHandler(file_handler)
 
 
+logger = LoggerConfig().logger
+
 if __name__ == "__main__":
 
-    logger = LoggerConfig()
-
-    logger.into("haha")
+    logger.warning("warning...")
