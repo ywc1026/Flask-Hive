@@ -15,7 +15,7 @@ class Response(ErrorCode):
             cls.SUCCESS: 'Success'
         }
 
-        if msg:
+        if msg is None:
             msg = error_msg.get(code, 'not defined')
         if data is None:
             data = []
