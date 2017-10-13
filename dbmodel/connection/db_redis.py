@@ -3,7 +3,7 @@
 import redis
 
 
-def Connection(host='192.168.83.134', port=6379):
+def connection(host='127.0.0.1', port=6379):
 
     pool = redis.ConnectionPool(host=host, port=port)
 
@@ -14,5 +14,5 @@ def Connection(host='192.168.83.134', port=6379):
 
 if __name__ == '__main__':
 
-    redis_db = Connection(host='192.168.83.134')
+    redis_db = connection(host='192.168.83.134')
     print redis_db.get('test')
