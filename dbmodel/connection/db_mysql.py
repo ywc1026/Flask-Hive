@@ -33,6 +33,17 @@ class Connection(object):
             conn.close()
             return False
 
+    def query_one_dict(self, sql=None):
+
+        data = self.execute_query(sql)
+        if data:
+            return data[0]
+        else:
+            return {}
+
+    def query_list(self, sql=None):
+        return self.execute_query(sql)
+    
     def execute_query(self, sql=None):
         try:
             conn = pymysql.connect(host=self.host, port=self.port, user=self.user, password=self.password, db=self.database, charset=self.charset, cursorclass=DictCursor)
