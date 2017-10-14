@@ -1,7 +1,6 @@
 from flask import Flask, g, request, session
 from viewhandler.page_blueprint import page
 from viewhandler.user_blueprint import user
-from logger import logger
 
 
 app = Flask(__name__)

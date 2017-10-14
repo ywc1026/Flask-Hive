@@ -11,7 +11,7 @@ class Auth():
 
             isLogin = True if session.get('fworkid', None) else False
             if not isLogin:
-                return jsonify(Response.NO_LOGIN)
+                return jsonify(Response.responseJson(Response.NO_LOGIN))
 
             return func(*args, **kwargs)
 
