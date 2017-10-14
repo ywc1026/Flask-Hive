@@ -1,6 +1,7 @@
 from flask import Flask, g, request, session
 from viewhandler.page_blueprint import page
 from viewhandler.user_blueprint import user
+from viewhandler.data_blueprint import data
 
 
 app = Flask(__name__)
@@ -8,7 +9,7 @@ app = Flask(__name__)
 app.config.from_pyfile('config.py')
 
 
-BLUEPRINT = [page, user]
+BLUEPRINT = [page, user, data]
 
 
 @app.context_processor

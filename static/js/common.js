@@ -30,9 +30,9 @@ function init_date(charlist) {
 
                 charlist.forEach(function (value, index, array) {
 
-                    var elem = value['elemid'];
+                    var elemid = value['elemid'];
                     var dims = value["dims"];
-                    flushchart(sdate, edate, elem, dims);
+                    flushchart(sdate, edate, elemid, dims);
                 })
 
             }
@@ -49,9 +49,9 @@ function init_date(charlist) {
 
                 charlist.forEach(function (value, index, array) {
 
-                    var elem = value['elemid'];
+                    var elemid = value['elemid'];
                     var dims = value["dims"];
-                    flushchart(sdate, edate, elem, dims);
+                    flushchart(sdate, edate, elemid, dims);
                 })
             }
     })
@@ -63,7 +63,7 @@ function init_date(charlist) {
 
 function flushchart(sdate, edate, elem, dims) {
 
-    var url = "";
+    var url = "/data/get_data";
     var params = {
         "sdate": sdate,
         "edate": edate,
@@ -84,7 +84,7 @@ function flushchart(sdate, edate, elem, dims) {
 function setChartData(elem, data) {
 
 
-    var title = data["data"];
+    var title = data["title"];
     var xAxis = data["xAxis"];
     var series = data["series"];
 
