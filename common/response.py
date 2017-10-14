@@ -3,7 +3,8 @@
 class ErrorCode(object):
     SUCCESS = 0
     ERROR = -1
-    INPUT_EMPTY = 1
+    INPUT_EMPTY = 2
+    NO_LOGIN = -3
 
 
 class Response(ErrorCode):
@@ -13,7 +14,9 @@ class Response(ErrorCode):
 
         error_msg = {
             cls.ERROR: 'Failed',
-            cls.SUCCESS: 'Success'
+            cls.SUCCESS: 'Success',
+            cls.INPUT_EMPTY: 'account or password is None',
+            cls.NO_LOGIN: 'no login'
         }
 
         if msg is None:

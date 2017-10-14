@@ -18,10 +18,10 @@ class UserControl(BaseControl):
         fpassword = self.args.get('fpassword', None)
 
         if not fworkid:
-            return Response.responseJson(Response.INPUT_EMPTY, msg='account is None')
+            return Response.responseJson(Response.INPUT_EMPTY, msg='account or password is None')
 
         if not fpassword:
-            return Response.responseJson(Response.INPUT_EMPTY, msg='password is None')
+            return Response.responseJson(Response.INPUT_EMPTY, msg='account or password is None')
 
         res = self.userinfomodel.check_userauth(fwork_id=fworkid, fpassword=fpassword)
         if res:

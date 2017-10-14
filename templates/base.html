@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="/static/plugin/jedate-6.0.0/skin/jedate.css">
     <link rel="stylesheet" href="/static/css/main.css">
 
-    <script src="/static/plugin/echarts.min.js"></script>
-    <script src="/static/plugin/jquery-2.1.4/jquery.js"></script>
-    <script src="/static/plugin/jedate-6.0.0/jquery.jedate.js"></script>
+    <script>
+        var isLogin = {{ isLogin | tojson}};
+        console.log(isLogin);
+    </script>
+
 
 </head>
 <body>
@@ -19,8 +21,10 @@
 
     {% endblock %}
 
-
-
+    <script src="/static/plugin/echarts.min.js"></script>
+    <script src="/static/plugin/jquery-2.1.4/jquery.js"></script>
+    <script src="/static/plugin/jedate-6.0.0/jquery.jedate.js"></script>
+    
     {% block userjs %}
 
     {% endblock %}

@@ -1,6 +1,7 @@
-from flask import Flask, g, request
+from flask import Flask, g, request, session
 from viewhandler.page_blueprint import page
 from viewhandler.user_blueprint import user
+from logger import logger
 
 
 app = Flask(__name__)
@@ -9,6 +10,13 @@ app.config.from_pyfile('config.py')
 
 
 BLUEPRINT = [page, user]
+
+
+@app.context_processor
+def common():
+    return {
+        'isLogin': True  if session.get('fworkid', None) else False
+    }
 
 
 def boostrap_app(app):
@@ -31,4 +39,5 @@ boostrap_app(app)
 
 
 if __name__ == '__main__':
+
     app.run(host=app.config['WEB_HOST'], port=app.config['WEB_PORT'])

@@ -2,6 +2,7 @@
 
 from flask import Blueprint, jsonify, g, session
 from control.usercontrol import UserControl
+from common.auth import auth
 
 
 user = Blueprint('user', __name__, url_prefix='/user')
@@ -21,3 +22,10 @@ def logout():
     control = UserControl(args=g.args, session=session)
     response = control.user_logout()
     return jsonify(response)
+
+
+@user.route('/test')
+@auth.login_require
+def test():
+
+    return jsonify({'code': 0, 'msg': 'already login'})

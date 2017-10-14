@@ -6,7 +6,12 @@
     <input id="account" class="item" style="width: 100px">
     <label class="password">Password</label>
     <input id="password" class="item" style="width: 150px">
-    <label id="btn" class="lab">Sign in</label>
+
+    {% if isLogin %}
+        <label id="btn" class="lab">Logout</label>
+    {% else %}
+        <label id="btn" class="lab">Sign in</label>
+    {% endif %}
 
 </header>
 </body>
