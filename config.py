@@ -29,5 +29,6 @@ MAIL_TOLIST = ['ywc1026@163.com']
 LOGGER_PATH = "/home/ywc/PycharmProjects/system/my.log"
 
 
-
+SESSION_COOKIE_NAME = 'session_id'
+SECRET_KEY = '45546'
 

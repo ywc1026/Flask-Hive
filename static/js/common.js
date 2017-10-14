@@ -124,8 +124,8 @@ function login() {
         if (elem.text() == "Sign in"){
             var url = "/user/login";
             var param = {
-                "account": $("#account").val(),
-                "password": $("#password").val()
+                "fworkid": $("#account").val(),
+                "fpassword": $("#password").val()
             }
 
             $.post(url, param, function (json_data) {

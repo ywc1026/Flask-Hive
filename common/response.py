@@ -3,6 +3,7 @@
 class ErrorCode(object):
     SUCCESS = 0
     ERROR = -1
+    INPUT_EMPTY = 1
 
 
 class Response(ErrorCode):
