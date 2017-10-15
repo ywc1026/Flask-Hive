@@ -25,8 +25,8 @@ if __name__ == '__main__':
     db = DataModel()
 
     params = {
-        'sdate': '2017-10-14',
-        'edate': '2017-10-14'
+        'sdate': '2017-10-15',
+        'edate': '2017-10-20'
     }
 
     print db.get_data(dims='chart1', args=params)

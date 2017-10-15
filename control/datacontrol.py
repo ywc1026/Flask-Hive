@@ -13,7 +13,7 @@ class DataControl(BaseControl):
     def user_get_data(self):
 
         dims = self.args.get('dims', None)
-        if not None:
+        if not dims:
             return Response.responseJson(Response.INPUT_EMPTY, 'input zhibiao is None')
 
         params = {
@@ -21,6 +21,8 @@ class DataControl(BaseControl):
             'edate': self.args.get('edate', '')
         }
         data = self.datamodel.get_data(dims=dims, args=params)
+
+        print data
 
         # option = {
         #     'title': 'ECharts 入门示例',
