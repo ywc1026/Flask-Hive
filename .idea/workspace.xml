@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6442345b-5fd5-4995-861c-bfb4d46b07e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.py" afterPath="$PROJECT_DIR$/bootstrap.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control/datacontrol.py" afterPath="$PROJECT_DIR$/control/datacontrol.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodel/datamodel.py" afterPath="$PROJECT_DIR$/dbmodel/datamodel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodel/sql_tpl.py" afterPath="$PROJECT_DIR$/dbmodel/sql_tpl.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.log" afterPath="$PROJECT_DIR$/my.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.py" afterPath="$PROJECT_DIR$/test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/main.js" afterPath="$PROJECT_DIR$/static/js/main.js" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,11 +19,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/system$userinfomodel.coverage" NAME="userinfomodel Coverage Results" MODIFIED="1507901101853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel" />
+    <SUITE FILE_PATH="coverage/system$datacontrol.coverage" NAME="datacontrol Coverage Results" MODIFIED="1508120133323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/control" />
     <SUITE FILE_PATH="coverage/system$db_mysql.coverage" NAME="db_mysql Coverage Results" MODIFIED="1507897325459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel/connection" />
     <SUITE FILE_PATH="coverage/system$user_blueprint.coverage" NAME="user_blueprint Coverage Results" MODIFIED="1507901083384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/viewhandler" />
-    <SUITE FILE_PATH="coverage/system$datamodel.coverage" NAME="datamodel Coverage Results" MODIFIED="1507988914282" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel" />
+    <SUITE FILE_PATH="coverage/system$datamodel.coverage" NAME="datamodel Coverage Results" MODIFIED="1508120575924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel" />
     <SUITE FILE_PATH="coverage/system$test.coverage" NAME="test Coverage Results" MODIFIED="1507988896875" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/system$bootstrap.coverage" NAME="bootstrap Coverage Results" MODIFIED="1507989002910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/system$bootstrap.coverage" NAME="bootstrap Coverage Results" MODIFIED="1508120532421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/system$db_redis.coverage" NAME="db_redis Coverage Results" MODIFIED="1507898386239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel/connection" />
     <SUITE FILE_PATH="coverage/system$logger.coverage" NAME="logger Coverage Results" MODIFIED="1507812647615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/system$db_mongodb.coverage" NAME="db_mongodb Coverage Results" MODIFIED="1507898785295" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel/connection" />
@@ -58,21 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="response.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/common/response.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="bootstrap.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootstrap.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+            <state relative-caret-position="-413">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -105,8 +97,8 @@
       <file leaf-file-name="datacontrol.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/control/datacontrol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="471">
+              <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
               <folding>
                 <element signature="e#15#50#0" expanded="true" />
               </folding>
@@ -117,8 +109,8 @@
       <file leaf-file-name="datamodel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/datamodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="598">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="e#2#30#0" expanded="true" />
               </folding>
@@ -126,13 +118,23 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sql_tpl.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="104">
+              <caret line="4" column="122" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="125" />
               <folding>
-                <marker date="1507988382930" expanded="true" signature="50:157" ph="select fdate... gameactive" />
+                <marker date="1508116430685" expanded="true" signature="57:181" ph="select fdate... gameactive" />
               </folding>
             </state>
           </provider>
@@ -173,7 +175,6 @@
         <option value="$PROJECT_DIR$/hello.py" />
         <option value="$PROJECT_DIR$/templates/main.html" />
         <option value="$PROJECT_DIR$/static/css/main.css" />
-        <option value="$PROJECT_DIR$/static/js/main.js" />
         <option value="$PROJECT_DIR$/my.log" />
         <option value="$PROJECT_DIR$/logger.py" />
         <option value="$PROJECT_DIR$/common/common.py" />
@@ -191,12 +192,13 @@
         <option value="$PROJECT_DIR$/common/response.py" />
         <option value="$PROJECT_DIR$/viewhandler/user_blueprint.py" />
         <option value="$PROJECT_DIR$/common/auth.py" />
-        <option value="$PROJECT_DIR$/bootstrap.py" />
         <option value="$PROJECT_DIR$/static/js/common.js" />
         <option value="$PROJECT_DIR$/viewhandler/data_blueprint.py" />
-        <option value="$PROJECT_DIR$/dbmodel/sql_tpl.py" />
         <option value="$PROJECT_DIR$/dbmodel/datamodel.py" />
         <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/dbmodel/sql_tpl.py" />
+        <option value="$PROJECT_DIR$/static/js/main.js" />
+        <option value="$PROJECT_DIR$/bootstrap.py" />
         <option value="$PROJECT_DIR$/control/datacontrol.py" />
       </list>
     </option>
@@ -238,8 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,12 +268,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="system" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dbmodel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -302,25 +336,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bootstrap">
-    <configuration default="false" name="user_blueprint" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/viewhandler" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="system" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/viewhandler/user_blueprint.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.datamodel">
     <configuration default="false" name="userinfomodel" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -389,6 +405,24 @@
       <module name="system" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dbmodel/datamodel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="datacontrol" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/control" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="system" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/control/datacontrol.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -602,19 +636,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.user_blueprint" />
-      <item index="1" class="java.lang.String" itemvalue="Python.userinfomodel" />
-      <item index="2" class="java.lang.String" itemvalue="Python.bootstrap" />
-      <item index="3" class="java.lang.String" itemvalue="Python.test" />
-      <item index="4" class="java.lang.String" itemvalue="Python.datamodel" />
+      <item index="0" class="java.lang.String" itemvalue="Python.userinfomodel" />
+      <item index="1" class="java.lang.String" itemvalue="Python.bootstrap" />
+      <item index="2" class="java.lang.String" itemvalue="Python.test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.datamodel" />
+      <item index="4" class="java.lang.String" itemvalue="Python.datacontrol" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.bootstrap" />
-        <item index="1" class="java.lang.String" itemvalue="Python.datamodel" />
-        <item index="2" class="java.lang.String" itemvalue="Python.test" />
-        <item index="3" class="java.lang.String" itemvalue="Python.userinfomodel" />
-        <item index="4" class="java.lang.String" itemvalue="Python.user_blueprint" />
+        <item index="0" class="java.lang.String" itemvalue="Python.datamodel" />
+        <item index="1" class="java.lang.String" itemvalue="Python.bootstrap" />
+        <item index="2" class="java.lang.String" itemvalue="Python.datacontrol" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.userinfomodel" />
       </list>
     </recent_temporary>
   </component>
@@ -636,26 +670,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1851" height="904" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13506213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13506213" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27020508" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39951864" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27020508" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293124" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39951864" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -931,13 +965,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1012,16 +1040,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1507988382930" expanded="true" signature="50:157" ph="select fdate... gameactive" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/viewhandler/data_blueprint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
@@ -1041,10 +1059,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="122" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="125" />
+          <folding>
+            <marker date="1508116430685" expanded="true" signature="57:181" ph="select fdate... gameactive" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="111" selection-start-line="9" selection-start-column="111" selection-end-line="9" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        <state relative-caret-position="-413">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -1053,8 +1089,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dbmodel/datamodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="598">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#2#30#0" expanded="true" />
           </folding>
@@ -1063,8 +1099,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/control/datacontrol.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="471">
+          <caret line="38" column="8" selection-start-line="38" selection-start-column="8" selection-end-line="38" selection-end-column="8" />
           <folding>
             <element signature="e#15#50#0" expanded="true" />
           </folding>

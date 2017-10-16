@@ -16,3 +16,33 @@
 2017-10-14 06:50:11,427 INFO request args -- {'dims': u'chart1', 'sdate': u'2017-10-25', 'edate': u'2017-10-28'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
 2017-10-14 06:50:17,594 INFO request args -- {'dims': u'chart1', 'sdate': u'2017-10-25', 'edate': u'2017-10-26'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
 2017-10-14 06:50:17,598 INFO request args -- {'dims': u'chart1', 'sdate': u'2017-10-25', 'edate': u'2017-10-26'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:15:53,124 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:16:47,705 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:17:46,791 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:18:52,262 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:21:13,853 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:21:39,932 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]
+2017-10-15 19:22:17,538 INFO request args -- {'fworkid': u'1', 'fpassword': u'123'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:22:17,861 INFO sql - select * from userinfo where fwork_id=1 and fpassword=123 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-15 19:22:17,881 INFO sql data -- [{u'flevel_id': 5, u'fpassword': u'123', u'fdept_id': 1, u'fcname': u'Tim', u'fwork_id': 1}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-15 19:22:37,569 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-15', 'edate': u'2017-10-16'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:22:37,573 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-15' and fdate<='2017-10-16' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-15 19:22:37,578 INFO sql data -- [{u'activeaccount': 691, u'fdate': u'2017-10-15'}, {u'activeaccount': 545, u'fdate': u'2017-10-16'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-15 19:22:37,632 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-15', 'edate': u'2017-10-16'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:22:37,633 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-15' and fdate<='2017-10-16' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-15 19:22:37,638 INFO sql data -- [{u'activeaccount': 691, u'fdate': u'2017-10-15'}, {u'activeaccount': 545, u'fdate': u'2017-10-16'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-15 19:22:40,432 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-15', 'edate': u'2017-10-17'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:22:40,433 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-15' and fdate<='2017-10-17' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-15 19:22:40,439 INFO sql data -- [{u'activeaccount': 691, u'fdate': u'2017-10-15'}, {u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-15 19:22:40,448 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-15', 'edate': u'2017-10-17'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-15 19:22:40,449 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-15' and fdate<='2017-10-17' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-15 19:22:40,454 INFO sql data -- [{u'activeaccount': 691, u'fdate': u'2017-10-15'}, {u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-15 19:22:56,667 WARNING Not Found sql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:15]

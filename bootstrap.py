@@ -24,8 +24,6 @@ def boostrap_app(app):
     for view in BLUEPRINT:
         app.register_blueprint(view)
 
-
-
     @app.before_request
     def beforre():
 

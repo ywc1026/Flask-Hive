@@ -7,7 +7,7 @@
 
 (function (){
 
-    var chartlist = [{"elemid": "chart1", "dims": "chart1"}, {"elemid": "chart1", "dims": "chart1"}];
+    var chartlist = [{"elemid": "chart1", "dims": "activeaccount"}, {"elemid": "chart1", "dims": "activeaccount"}];
 
     init_chart(chartlist);
     init_date(chartlist);
