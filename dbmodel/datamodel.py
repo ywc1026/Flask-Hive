@@ -3,6 +3,7 @@
 from dbbase import BaseModel
 from sql_tpl import SQL_TPL
 from logger import logger
+from datetime import datetime
 
 
 class DataModel(BaseModel):
@@ -17,6 +18,19 @@ class DataModel(BaseModel):
 
         sql = sql % args
 
+        # mongodb
+        {
+            'sql': 'select',
+            'flushdate': '',
+            'data': ,
+            'flushcount':,
+        }
+
+        params = {
+            'sql': sql
+        }
+        data = self.mongodb_db
+        # the speed is very slow when manipulate huge data
         data = self.mysql_db.query_list(sql=sql)
         return data
 
