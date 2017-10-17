@@ -3,6 +3,7 @@ from basecontrol import BaseControl
 from common.response import Response
 from dbmodel.datamodel import DataModel
 from collections import defaultdict
+from dbmodel.userinfomodel import UserInfoModel
 
 
 class DataControl(BaseControl):
@@ -11,10 +12,21 @@ class DataControl(BaseControl):
         super(DataControl, self).__init__(*args, **kwargs)
         self.datamodel = DataModel()
 
+    def auth_require(self):
+        """
+        identify the permission of the user
+        :return:
+        """
+
+        # get the information of the user
+        fworkid = self.session.get('fworkid', None)
+
+
     def format_data(self, dims=None):
 
         data = dims.get('data', [])
         name = dims.get('name', '')
+        type = dims.get('type', 'bar')
 
         dict_data = defaultdict(list)
         for item in data:
@@ -33,10 +45,11 @@ class DataControl(BaseControl):
             "xAxis": axis_x,
             "series": [{
                 'name': name,
-                'data': axis_y
+                'data': axis_y,
+                'type': type
             }]
         }
-        
+
         return dims
 
     def user_get_data(self):
@@ -55,10 +68,13 @@ class DataControl(BaseControl):
 
         dims = {
             'name': dims,
+            'type': 'line',
             'data': data
         }
         res_data = self.format_data(dims=dims)
         print res_data
+
+        res_data['title'] = "Stock's Volume"
         # option = {
         #     'title': 'ECharts 入门示例',
         #     'xAxis': ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],

@@ -11,7 +11,7 @@ def insert_test_data():
 
     insert_sql = 'insert into gameactive (fdate, fuserid, fgameid) values'
     sql_list = []
-    for j in range(1, 10):
+    for j in range(10, 20):
         fdate = (datetime.datetime.now().date() + timedelta(days=j)).strftime('%Y-%m-%d')
         temp = random.randrange(1, 1000)
         for i in range(1, temp):

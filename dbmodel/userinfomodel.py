@@ -15,3 +15,22 @@ class UserInfoModel(BaseModel):
         sql = 'select * from userinfo where fwork_id={fwork_id} and fpassword={fpassword}'.format(fwork_id=fwork_id, fpassword=fpassword)
         data = self.mysql_db.query_one_dict(sql)
         return True if data else False
+
+    def get_userinfo(self, fworkid):
+        """
+            get the information of the user
+        :param fworkid:
+        :return:
+        """
+        if not fworkid:
+            logger.warning("the workid is None")
+            return {}
+
+        sql = 'select fcname, fworkid, fdept_id, flevel_id from userinfo where fworkid={fworkid}'.format(fworkid=fworkid)
+
+        data = self.mysql_db.query_list(sql)
+
+        return data
+
+
+

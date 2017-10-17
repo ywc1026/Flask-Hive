@@ -10,6 +10,7 @@ class Auth():
         def wrap(*args, **kwargs):
 
             isLogin = True if session.get('fworkid', None) else False
+
             if not isLogin:
                 return jsonify(Response.responseJson(Response.NO_LOGIN))
 
