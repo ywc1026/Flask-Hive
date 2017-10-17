@@ -2,6 +2,7 @@
 
 from dbbase import BaseModel
 from logger import logger
+import json
 
 
 class UserInfoModel(BaseModel):
@@ -12,8 +13,9 @@ class UserInfoModel(BaseModel):
             logger.warning("account or password is none.")
             return False
 
-        sql = 'select * from userinfo where fwork_id={fwork_id} and fpassword={fpassword}'.format(fwork_id=fwork_id, fpassword=fpassword)
+        sql = 'select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id={fwork_id} and fpassword={fpassword}'.format(fwork_id=fwork_id, fpassword=fpassword)
         data = self.mysql_db.query_one_dict(sql)
+
         return True if data else False
 
     def get_userinfo(self, fworkid):
@@ -26,11 +28,21 @@ class UserInfoModel(BaseModel):
             logger.warning("the workid is None")
             return {}
 
-        sql = 'select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id={fworkid}'.format(fworkid=fworkid)
+        redis_key = self.product_redis_key('userinfo', fworkid)
 
-        data = self.mysql_db.query_one_dict(sql)
+        data = self.redis_db.hgetall(redis_key)
+
+        if not data:
+            sql = 'select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id={fworkid}'.format(fworkid=fworkid)
+            data = self.mysql_db.query_one_dict(sql)
+            if data:
+                self.redis_db.hmset(redis_key, data)
+                self.redis_db.expire(redis_key, self.redis_time)
 
         return data
 
+if __name__ == '__main__':
 
+    db = UserInfoModel()
 
+    print db.get_userinfo(fworkid=1)

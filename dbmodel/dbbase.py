@@ -13,4 +13,10 @@ class BaseModel(object):
     def __init__(self):
 
         self.redis_time = 60*60*24
+        self.redis_key_prefix = 'yu_'
+
+    def product_redis_key(self, prefix, id):
+
+        redis_key = self.redis_key_prefix+str(prefix)+str(id)
+        return redis_key
 
