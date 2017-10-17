@@ -26,9 +26,9 @@ class UserInfoModel(BaseModel):
             logger.warning("the workid is None")
             return {}
 
-        sql = 'select fcname, fworkid, fdept_id, flevel_id from userinfo where fworkid={fworkid}'.format(fworkid=fworkid)
+        sql = 'select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id={fworkid}'.format(fworkid=fworkid)
 
-        data = self.mysql_db.query_list(sql)
+        data = self.mysql_db.query_one_dict(sql)
 
         return data
 

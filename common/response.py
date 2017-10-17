@@ -5,6 +5,7 @@ class ErrorCode(object):
     ERROR = -1
     INPUT_EMPTY = 2
     NO_LOGIN = -3
+    NO_AUTH = -4
 
 
 class Response(ErrorCode):
@@ -16,7 +17,8 @@ class Response(ErrorCode):
             cls.ERROR: 'Failed',
             cls.SUCCESS: 'Success',
             cls.INPUT_EMPTY: 'account or password is None',
-            cls.NO_LOGIN: 'no login'
+            cls.NO_LOGIN: 'no login',
+            cls.NO_AUTH: 'no auth'
         }
 
         if msg is None:

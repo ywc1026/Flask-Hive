@@ -4,6 +4,7 @@ from common.response import Response
 from dbmodel.datamodel import DataModel
 from collections import defaultdict
 from dbmodel.userinfomodel import UserInfoModel
+from dbmodel.authtablemodel import AuthTableModel
 
 
 class DataControl(BaseControl):
@@ -11,8 +12,10 @@ class DataControl(BaseControl):
     def __init__(self, *args, **kwargs):
         super(DataControl, self).__init__(*args, **kwargs)
         self.datamodel = DataModel()
+        self.userinfomodel = UserInfoModel()
+        self.authtablemodel = AuthTableModel()
 
-    def auth_require(self):
+    def auth_require(self, dimsname=None):
         """
         identify the permission of the user
         :return:
@@ -20,7 +23,19 @@ class DataControl(BaseControl):
 
         # get the information of the user
         fworkid = self.session.get('fworkid', None)
+        userinfo = self.userinfomodel.get_userinfo(fworkid=fworkid)
+        flevel_id = userinfo.get('flevel_id', 0)
 
+        levelinfo = self.authtablemodel.get_dims_levelinfo(dimsname=dimsname)
+        dims_level_id = levelinfo.get('flevel_id', 10000)
+
+        print userinfo
+        print levelinfo
+
+        if flevel_id<dims_level_id:
+            return False
+
+        return True
 
     def format_data(self, dims=None):
 
@@ -57,6 +72,10 @@ class DataControl(BaseControl):
         dims = self.args.get('dims', None)
         if not dims:
             return Response.responseJson(Response.INPUT_EMPTY, 'input zhibiao is None')
+
+        isAuth = self.auth_require(dimsname=dims)
+        if not isAuth:
+            return Response.responseJson(Response.NO_AUTH)
 
         params = {
             'sdate': self.args.get('sdate', ''),
