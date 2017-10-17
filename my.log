@@ -1,0 +1,8 @@
+2017-10-17 06:26:32,901 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-31'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-17 06:26:32,904 INFO get data from mysql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:28]
+2017-10-17 06:26:32,964 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-16' and fdate<='2017-10-31' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-17 06:26:32,997 INFO sql data -- [{u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}, {u'activeaccount': 517, u'fdate': u'2017-10-18'}, {u'activeaccount': 455, u'fdate': u'2017-10-19'}, {u'activeaccount': 875, u'fdate': u'2017-10-20'}, {u'activeaccount': 997, u'fdate': u'2017-10-21'}, {u'activeaccount': 520, u'fdate': u'2017-10-22'}, {u'activeaccount': 284, u'fdate': u'2017-10-23'}, {u'activeaccount': 632, u'fdate': u'2017-10-25'}, {u'activeaccount': 539, u'fdate': u'2017-10-26'}, {u'activeaccount': 516, u'fdate': u'2017-10-27'}, {u'activeaccount': 80, u'fdate': u'2017-10-28'}, {u'activeaccount': 890, u'fdate': u'2017-10-29'}, {u'activeaccount': 53, u'fdate': u'2017-10-30'}, {u'activeaccount': 553, u'fdate': u'2017-10-31'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-17 06:26:33,011 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-31'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-17 06:26:33,013 INFO get data from mongodb [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:39]
