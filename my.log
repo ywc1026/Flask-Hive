@@ -6,3 +6,31 @@
 2017-10-17 06:26:32,997 INFO sql data -- [{u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}, {u'activeaccount': 517, u'fdate': u'2017-10-18'}, {u'activeaccount': 455, u'fdate': u'2017-10-19'}, {u'activeaccount': 875, u'fdate': u'2017-10-20'}, {u'activeaccount': 997, u'fdate': u'2017-10-21'}, {u'activeaccount': 520, u'fdate': u'2017-10-22'}, {u'activeaccount': 284, u'fdate': u'2017-10-23'}, {u'activeaccount': 632, u'fdate': u'2017-10-25'}, {u'activeaccount': 539, u'fdate': u'2017-10-26'}, {u'activeaccount': 516, u'fdate': u'2017-10-27'}, {u'activeaccount': 80, u'fdate': u'2017-10-28'}, {u'activeaccount': 890, u'fdate': u'2017-10-29'}, {u'activeaccount': 53, u'fdate': u'2017-10-30'}, {u'activeaccount': 553, u'fdate': u'2017-10-31'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
 2017-10-17 06:26:33,011 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-31'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
 2017-10-17 06:26:33,013 INFO get data from mongodb [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:39]
+2017-10-18 18:35:02,943 INFO request args -- {'fworkid': u'1', 'fpassword': u'123'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:03,005 INFO sql - select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id=1 and fpassword=123 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-18 18:35:03,051 INFO sql data -- [{u'flevel_id': 5, u'fdept_id': 1, u'fcname': u'Tim', u'fwork_id': 1}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-18 18:35:06,028 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-18'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:06,031 INFO sql - select fcname, fwork_id, fdept_id, flevel_id from userinfo where fwork_id=1 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-18 18:35:06,031 INFO sql data -- [{u'flevel_id': 5, u'fdept_id': 1, u'fcname': u'Tim', u'fwork_id': 1}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-18 18:35:06,035 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-18'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:06,059 INFO get data from mysql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:28]
+2017-10-18 18:35:06,060 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-16' and fdate<='2017-10-18' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-18 18:35:06,068 INFO sql data -- [{u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}, {u'activeaccount': 517, u'fdate': u'2017-10-18'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-18 18:35:08,456 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-28'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:08,459 INFO get data from mysql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:28]
+2017-10-18 18:35:08,461 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-16' and fdate<='2017-10-28' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-18 18:35:08,487 INFO sql data -- [{u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}, {u'activeaccount': 517, u'fdate': u'2017-10-18'}, {u'activeaccount': 455, u'fdate': u'2017-10-19'}, {u'activeaccount': 875, u'fdate': u'2017-10-20'}, {u'activeaccount': 997, u'fdate': u'2017-10-21'}, {u'activeaccount': 520, u'fdate': u'2017-10-22'}, {u'activeaccount': 284, u'fdate': u'2017-10-23'}, {u'activeaccount': 632, u'fdate': u'2017-10-25'}, {u'activeaccount': 539, u'fdate': u'2017-10-26'}, {u'activeaccount': 516, u'fdate': u'2017-10-27'}, {u'activeaccount': 80, u'fdate': u'2017-10-28'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-18 18:35:08,490 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-28'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:08,492 INFO get data from mongodb [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:39]
+2017-10-18 18:35:11,555 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-31'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:11,557 INFO get data from mysql [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:28]
+2017-10-18 18:35:11,558 INFO sql - 
+                select fdate, count(fgameid) as activeaccount from gameactive where fdate>='2017-10-16' and fdate<='2017-10-31' GROUP by fdate
+                 [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:50]
+2017-10-18 18:35:11,569 INFO sql data -- [{u'activeaccount': 545, u'fdate': u'2017-10-16'}, {u'activeaccount': 718, u'fdate': u'2017-10-17'}, {u'activeaccount': 517, u'fdate': u'2017-10-18'}, {u'activeaccount': 455, u'fdate': u'2017-10-19'}, {u'activeaccount': 875, u'fdate': u'2017-10-20'}, {u'activeaccount': 997, u'fdate': u'2017-10-21'}, {u'activeaccount': 520, u'fdate': u'2017-10-22'}, {u'activeaccount': 284, u'fdate': u'2017-10-23'}, {u'activeaccount': 632, u'fdate': u'2017-10-25'}, {u'activeaccount': 539, u'fdate': u'2017-10-26'}, {u'activeaccount': 516, u'fdate': u'2017-10-27'}, {u'activeaccount': 80, u'fdate': u'2017-10-28'}, {u'activeaccount': 890, u'fdate': u'2017-10-29'}, {u'activeaccount': 53, u'fdate': u'2017-10-30'}, {u'activeaccount': 553, u'fdate': u'2017-10-31'}] [/home/ywc/PycharmProjects/system/dbmodel/connection/db_mysql.py:55]
+2017-10-18 18:35:11,573 INFO request args -- {'dims': u'activeaccount', 'sdate': u'2017-10-16', 'edate': u'2017-10-31'} [/home/ywc/PycharmProjects/system/control/basecontrol.py:12]
+2017-10-18 18:35:11,575 INFO get data from mongodb [/home/ywc/PycharmProjects/system/dbmodel/datamodel.py:39]
