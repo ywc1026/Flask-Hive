@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 class CleanMongoDBCache(BaseModel):
 
     def __init__(self):
-        self.maxcount = 100
+        self.maxcount = 950
 
     def insert_test(self):
         for i in range(10):
@@ -25,10 +25,12 @@ class CleanMongoDBCache(BaseModel):
     def run_script(self):
         count = self.mongodb_db.buniss.count()
         overcount = count - self.maxcount
+        print overcount
 
         if overcount > 0:
             res_data = self.mongodb_db.buniss.find().sort([('flushdate', ASCENDING), ('flushcount', ASCENDING)]).limit(overcount)
             res_sql_list = [item.get('sql', '') for item in res_data]
+            print res_sql_list
             self.mongodb_db.buniss.remove({"sql": {"$in": res_sql_list}})
 
 
@@ -36,4 +38,4 @@ if __name__ == '__main__':
 
     db = CleanMongoDBCache()
 
-    db.insert_test()
+    db.run_script()
