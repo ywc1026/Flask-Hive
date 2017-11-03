@@ -41,20 +41,23 @@ class DataControl(BaseControl):
 
         data = dims.get('data', [])
         name = dims.get('name', '')
-        type = dims.get('type', 'bar')
+        type = dims.get('type', 'candlestick')
 
         dict_data = defaultdict(list)
         for item in data:
             key = item.get('fdate', None)
-            dict_data[key].append(item.get(name))
+            dict_data[key].append(item.get('fopen'))
+            dict_data[key].append(item.get('fclose'))
+            dict_data[key].append(item.get('flow'))
+            dict_data[key].append(item.get('fhigh'))
 
         axis_x = []
         axis_y = []
         temp = sorted(dict_data.items(), key=lambda x: x[0], reverse=False)
         for key, obj in temp:
             axis_x.append(key)
-            sum_data = sum([num for num in obj if isinstance(num, (float, int, long))])
-            axis_y.append(sum_data)
+            # sum_data = sum([num for num in obj if isinstance(num, (float, int, long))])
+            axis_y.append(obj)
 
         dims = {
             "xAxis": axis_x,
@@ -87,13 +90,13 @@ class DataControl(BaseControl):
 
         dims = {
             'name': dims,
-            'type': 'line',
+            'type': 'candlestick',
             'data': data
         }
         res_data = self.format_data(dims=dims)
         print res_data
 
-        res_data['title'] = "Stock's Volume"
+        res_data['title'] = "深证综合指数"
         # option = {
         #     'title': 'ECharts 入门示例',
         #     'xAxis': ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"],

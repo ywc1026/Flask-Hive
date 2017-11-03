@@ -1,7 +1,7 @@
 
 
 from dbbase import BaseModel
-from sql_tpl import SQL_TPL
+from sql_tpl import SQL_TPL, SQL_TPL2
 from logger import logger
 from datetime import datetime
 
@@ -10,7 +10,7 @@ class DataModel(BaseModel):
 
     def get_data(self, dims=None, args={}):
 
-        sql = SQL_TPL.get(dims, None)
+        sql = SQL_TPL2.get(dims, None)
 
         if not sql:
             logger.warning('Not Found sql')

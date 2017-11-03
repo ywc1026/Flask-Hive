@@ -23,7 +23,7 @@ function init_date(charlist) {
             format:"YYYY-MM-DD",
             isTime:false,
             isinitVal: true,
-            minDate:"2014-09-19 00:00:00",
+            minDate:"2012-09-19 00:00:00",
             okfun:function(obj) {
                 var sdate = $("#sdate").val();
                 var edate = $("#edate").val();
@@ -42,7 +42,7 @@ function init_date(charlist) {
             format:"YYYY-MM-DD",
             isTime:false,
             isinitVal: true,
-            minDate:"2014-09-19 00:00:00",
+            minDate:"2012-09-19 00:00:00",
             okfun:function(obj) {
                 var sdate = $("#sdate").val();
                 var edate = $("#edate").val();
@@ -57,8 +57,6 @@ function init_date(charlist) {
     })
 
 }
-
-
 
 
 function flushchart(sdate, edate, elem, dims) {
@@ -101,12 +99,24 @@ function setChartData(elem, data) {
             },
             tooltip: {},
             legend: {
-                data:['销量']
+                data:['日K']
             },
             xAxis: {
-                data: xAxis
+                data: xAxis,
+                scale: true,
+                boundaryGap : false,
+                axisLine: {onZero: false},
+                splitLine: {show: false},
+                splitNumber: 20,
+                min: 'dataMin',
+                max: 'dataMax'
             },
-            yAxis: {},
+            yAxis: {
+                scale: true,
+                splitArea: {
+                    show: true
+        }
+            },
             series: series
         };
 
