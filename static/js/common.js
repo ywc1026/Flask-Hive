@@ -101,6 +101,11 @@ function setChartData(elem, data) {
             legend: {
                 data:['日K']
             },
+            grid: {
+                left: '10%',
+                right: '10%',
+                bottom: '15%'
+            },
             xAxis: {
                 data: xAxis,
                 scale: true,
@@ -117,6 +122,20 @@ function setChartData(elem, data) {
                     show: true
         }
             },
+            dataZoom: [
+                {
+                    type: 'inside',
+                    start: 50,
+                    end: 100
+                },
+                {
+                    show: true,
+                    type: 'slider',
+                    y: '90%',
+                    start: 50,
+                    end: 100
+                }
+    ],
             series: series
         };
 

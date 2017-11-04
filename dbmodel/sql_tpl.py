@@ -8,6 +8,6 @@ SQL_TPL = {
 
 SQL_TPL2 = {
     'activeaccount':   '''
-                select * from stockinfo
+                select * from stockinfo where fdate>='%(sdate)s' and fdate<='%(edate)s'
                 '''
 }

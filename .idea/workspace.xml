@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6442345b-5fd5-4995-861c-bfb4d46b07e3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/control/datacontrol.py" afterPath="$PROJECT_DIR$/control/datacontrol.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodel/datamodel.py" afterPath="$PROJECT_DIR$/dbmodel/datamodel.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodel/sql_tpl.py" afterPath="$PROJECT_DIR$/dbmodel/sql_tpl.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.log" afterPath="$PROJECT_DIR$/my.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/common.js" afterPath="$PROJECT_DIR$/static/js/common.js" />
@@ -25,7 +23,7 @@
     <SUITE FILE_PATH="coverage/system$authtablemodel.coverage" NAME="authtablemodel Coverage Results" MODIFIED="1508209385544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel" />
     <SUITE FILE_PATH="coverage/system$datamodel.coverage" NAME="datamodel Coverage Results" MODIFIED="1509705196514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel" />
     <SUITE FILE_PATH="coverage/system$test.coverage" NAME="test Coverage Results" MODIFIED="1508122518799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/system$bootstrap.coverage" NAME="bootstrap Coverage Results" MODIFIED="1509714348483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/system$bootstrap.coverage" NAME="bootstrap Coverage Results" MODIFIED="1509763716550" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/system$db_redis.coverage" NAME="db_redis Coverage Results" MODIFIED="1507898386239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dbmodel/connection" />
     <SUITE FILE_PATH="coverage/system$runcleanmongocache.coverage" NAME="runcleanmongocache Coverage Results" MODIFIED="1508315661224" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/system$logger.coverage" NAME="logger Coverage Results" MODIFIED="1507812647615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -43,8 +41,8 @@
       <file leaf-file-name="datacontrol.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/control/datacontrol.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
+            <state relative-caret-position="446">
+              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#15#50#0" expanded="true" />
               </folding>
@@ -55,8 +53,8 @@
       <file leaf-file-name="datamodel.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/datamodel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            <state relative-caret-position="260">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
               <folding>
                 <element signature="e#2#30#0" expanded="true" />
               </folding>
@@ -67,7 +65,7 @@
       <file leaf-file-name="db_mysql.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/connection/db_mysql.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
+            <state relative-caret-position="1404">
               <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
               <folding>
                 <marker date="1507863195243" expanded="true" signature="2043:2065" ph="select * fro... userinfo" />
@@ -80,8 +78,8 @@
       <file leaf-file-name="common.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/common.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="498">
+              <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -90,11 +88,12 @@
       <file leaf-file-name="sql_tpl.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+            <state relative-caret-position="312">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
               <folding>
-                <marker date="1509714173055" expanded="true" signature="57:181" ph="select fdate... gameactive" />
-                <marker date="1509714173055" expanded="true" signature="261:284" ph="select * fro... stockinfo" />
+                <marker date="1509760501860" expanded="true" signature="57:181" ph="select fdate... gameactive" />
+                <marker date="1509760501860" expanded="true" signature="261:284" ph="select * fro... stockinfo" />
+                <marker date="1509760501860" expanded="true" signature="261:332" ph="select * fro... stockinfo" />
               </folding>
             </state>
           </provider>
@@ -157,8 +156,8 @@
         <option value="$PROJECT_DIR$/dbmodel/connection/db_mysql.py" />
         <option value="$PROJECT_DIR$/dbmodel/datamodel.py" />
         <option value="$PROJECT_DIR$/dbmodel/sql_tpl.py" />
-        <option value="$PROJECT_DIR$/control/datacontrol.py" />
         <option value="$PROJECT_DIR$/static/js/common.js" />
+        <option value="$PROJECT_DIR$/control/datacontrol.py" />
       </list>
     </option>
   </component>
@@ -265,8 +264,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -977,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -985,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -993,20 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#2#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodel/connection/db_mysql.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
-          <folding>
-            <marker date="1507863195243" expanded="true" signature="2043:2065" ph="select * fro... userinfo" />
-            <marker date="1507863195243" expanded="true" signature="2110:2181" ph="insert into authtable... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1018,41 +1001,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/control/datacontrol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="66" column="28" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-          <folding>
-            <element signature="e#15#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-          <folding>
-            <marker date="1509714173055" expanded="true" signature="57:181" ph="select fdate... gameactive" />
-            <marker date="1509714173055" expanded="true" signature="261:284" ph="select * fro... stockinfo" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dbmodel/datamodel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="260">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
           <folding>
             <element signature="e#2#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodel/sql_tpl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <marker date="1509760501860" expanded="true" signature="57:181" ph="select fdate... gameactive" />
+            <marker date="1509760501860" expanded="true" signature="261:284" ph="select * fro... stockinfo" />
+            <marker date="1509760501860" expanded="true" signature="261:332" ph="select * fro... stockinfo" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodel/connection/db_mysql.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <folding>
+            <marker date="1507863195243" expanded="true" signature="2043:2065" ph="select * fro... userinfo" />
+            <marker date="1507863195243" expanded="true" signature="2110:2181" ph="insert into authtable... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/control/datacontrol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/common.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="498">
+          <caret line="96" column="20" selection-start-line="96" selection-start-column="20" selection-end-line="96" selection-end-column="20" />
           <folding />
         </state>
       </provider>
