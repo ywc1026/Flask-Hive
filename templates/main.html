@@ -8,14 +8,73 @@
 
 <div class="contain">
     <!--date-->
-    <input id="sdate" class="date1" style="width: 185px">
-    <input id="edate" class="date2" style="width: 185px">
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="chart1" class="chart"></div>
-    <button type="button" class="pick">选股</button>
+    <!--<input id="sdate" class="date1" style="width: 185px">-->
+    <!--<input id="edate" class="date2" style="width: 185px">-->
+     <!--为ECharts准备一个具备大小（宽高）的Dom-->
+    <!--<div id="chart1" class="chart"></div>-->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td align="center" class="biaoti" height="60">股票推荐结果</td>
+        </tr>
+    </table>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
+  <tr>
+    <td width="25%" class="btbg font-center titfont" rowspan="2">股票编号</td>
+    <td width="25%" class="btbg font-center titfont" rowspan="2">股票名称</td>
+    <td width="25%" class="btbg font-center titfont" rowspan="2">行业分类</td>
+    <td width="25%" class="btbg font-center titfont" rowspan="2">是否为龙头股</td>
+  </tr>
+
+  <tr>
+
+  </tr>
+  <tr>
+    <td>000338</td>
+    <td>潍柴动力</td>
+    <td>工程机械、动力总成</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td>000401</td>
+    <td>冀东水泥</td>
+    <td>建材产品的制造</td>
+    <td>是</td>
+  </tr>
+  <tr>
+    <td>000028</td>
+    <td>国药一致</td>
+    <td>药品及医疗器械批发</td>
+    <td>否</td>
+  </tr>
+  <tr>
+    <td>000418</td>
+    <td>小天鹅Ａ</td>
+    <td>洗衣机制造</td>
+    <td>否</td>
+  </tr>
+    <tr>
+    <td>000410</td>
+    <td>沈阳机床</td>
+    <td>机床制造</td>
+    <td>否</td>
+  </tr>
+    <tr>
+    <td>000048</td>
+    <td>康达尔</td>
+    <td>制造、食品加工</td>
+    <td>否</td>
+  </tr>
+
+</table>
+</table>
+
+    <button type="button" class="pick">返回</button>
     <button type="button" class="predict">预测</button>
 
 </div>
+
+
 {% endblock %}
 
 
