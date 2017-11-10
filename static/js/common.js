@@ -3,6 +3,11 @@
  */
 
 
+var upColor = '#ec0000';
+var upBorderColor = '#8A0000';
+var downColor = '#00da3c';
+var downBorderColor = '#008F28';
+
 
 function init_chart(chartlist){
 
@@ -85,7 +90,54 @@ function setChartData(elem, data) {
     var title = data["title"];
     var xAxis = data["xAxis"];
     var series = data["series"];
-
+    // console.log(series[0].type)
+    series[0].itemStyle = {
+                normal: {
+                    color: upColor,
+                    color0: downColor,
+                    borderColor: upBorderColor,
+                    borderColor0: downBorderColor
+                }
+            };
+    series[0].markPoint = {
+                label: {
+                    normal: {
+                        formatter: function (param) {
+                            return param != null ? Math.round(param.value) : '';
+                        }
+                    }
+                },
+                data: [
+                    {
+                        name: 'XX标点',
+                        coord: ['2013/5/31', 2300],
+                        value: 2300,
+                        itemStyle: {
+                            normal: {color: 'rgb(41,60,85)'}
+                        }
+                    },
+                    {
+                        name: 'highest value',
+                        type: 'max',
+                        valueDim: 'highest'
+                    },
+                    {
+                        name: 'lowest value',
+                        type: 'min',
+                        valueDim: 'lowest'
+                    },
+                    {
+                        name: 'average value on close',
+                        type: 'average',
+                        valueDim: 'close'
+                    }
+                ],
+                tooltip: {
+                    formatter: function (param) {
+                        return param.name + '<br>' + (param.data.coord || '');
+                    }
+                }
+            };
     var names = [];
 
     series.forEach(function (value, index, array) {

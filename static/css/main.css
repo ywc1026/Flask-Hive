@@ -62,3 +62,17 @@
     width: 800px;
     height: 500px;
 }
+
+.pick{
+    margin: 10px auto auto 450px;
+    width: auto;
+    height: 45px;
+    color: darkred;
+}
+
+.predict{
+    margin: 10px auto auto 100px;
+    width: auto;
+    height: 45px;
+    color: darkred;
+}
